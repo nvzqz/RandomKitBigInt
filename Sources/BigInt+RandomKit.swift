@@ -28,6 +28,35 @@
 import RandomKit
 import BigInt
 
+extension BigInt: Random {
+
+    /// Generates a random value of `Self` of count `1` using `randomGenerator`.
+    public static func random(using randomGenerator: RandomGenerator) -> BigInt {
+        return random(ofCount: 1, using: randomGenerator)
+    }
+
+    /// Generates a random value of `Self` with random negative of `count` digits using the default random generator.
+    public static func random(ofCount count: Int) -> BigInt {
+        return random(ofCount: count, using: .default)
+    }
+
+    /// Generates a random value of `Self` with `negative` of `count` digits using the default random generator.
+    public static func random(ofCount count: Int, negative: Bool) -> BigInt {
+        return random(ofCount: count, negative: negative, using: .default)
+    }
+
+    /// Generates a random value of `Self` with random negative of `count` digits using `randomGenerator`.
+    public static func random(ofCount count: Int, using randomGenerator: RandomGenerator) -> BigInt {
+        return random(ofCount: count, negative: .random(using: randomGenerator), using: randomGenerator)
+    }
+
+    /// Generates a random value of `Self` with `negative` of `count` digits using `randomGenerator`.
+    public static func random(ofCount count: Int, negative: Bool, using randomGenerator: RandomGenerator) -> BigInt {
+        return BigInt(abs: .random(ofCount: count, using: randomGenerator), negative: negative)
+    }
+
+}
+
 extension BigInt: RandomToValue, RandomThroughValue, RandomWithinRange, RandomWithinClosedRange {
 
     /// The random base from which to generate.

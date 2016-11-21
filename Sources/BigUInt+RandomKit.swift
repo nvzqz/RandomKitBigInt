@@ -28,15 +28,30 @@
 import BigInt
 import RandomKit
 
-extension BigUInt: RandomToValue, RandomThroughValue, RandomWithinRange, RandomWithinClosedRange {
+extension BigUInt: Random {
 
-    private static func _random(to count: Int, using randomGenerator: RandomGenerator) -> BigUInt {
+    /// Generates a random value of `Self` of count `1` using `randomGenerator`.
+    public static func random(using randomGenerator: RandomGenerator) -> BigUInt {
+        return random(ofCount: 1, using: randomGenerator)
+    }
+
+    /// Generates a random value of `Self` of `count` digits using the default random generator.
+    public static func random(ofCount count: Int) -> BigUInt {
+        return random(ofCount: count, using: .default)
+    }
+
+    /// Generates a random value of `Self` of `count` digits using `randomGenerator`.
+    public static func random(ofCount count: Int, using randomGenerator: RandomGenerator) -> BigUInt {
         var result: BigUInt = 0
         for i in 0 ..< count {
             result[i] = .random(using: randomGenerator)
         }
         return result
     }
+
+}
+
+extension BigUInt: RandomToValue, RandomThroughValue, RandomWithinRange, RandomWithinClosedRange {
 
     /// The random base from which to generate.
     public static let randomBase: BigUInt = 0
@@ -46,7 +61,7 @@ extension BigUInt: RandomToValue, RandomThroughValue, RandomWithinRange, RandomW
         if value == randomBase {
             return value
         } else {
-            return _random(to: value.count, using: randomGenerator) % value
+            return random(ofCount: value.count, using: randomGenerator) % value
         }
     }
 
@@ -55,7 +70,7 @@ extension BigUInt: RandomToValue, RandomThroughValue, RandomWithinRange, RandomW
         if value == randomBase {
             return value
         } else {
-            return _random(to: value.count, using: randomGenerator) % (value + 1)
+            return random(ofCount: value.count, using: randomGenerator) % (value + 1)
         }
     }
 
