@@ -35,6 +35,16 @@ extension BigInt: Random {
         return random(ofCount: 1, using: randomGenerator)
     }
 
+    /// Generates a random value of `Self` with `negative` of count `1` using the default random generator.
+    public static func random(negative: Bool) -> BigInt {
+        return random(negative: negative, using: .default)
+    }
+
+    /// Generates a random value of `Self` with `negative` of count `1` using `randomGenerator`.
+    public static func random(negative: Bool, using randomGenerator: RandomGenerator) -> BigInt {
+        return random(ofCount: 1, negative: negative, using: randomGenerator)
+    }
+
     /// Generates a random value of `Self` with random negative of `count` digits using the default random generator.
     public static func random(ofCount count: Int) -> BigInt {
         return random(ofCount: count, using: .default)
