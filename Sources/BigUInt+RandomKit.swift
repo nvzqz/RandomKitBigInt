@@ -42,11 +42,7 @@ extension BigUInt: Random {
 
     /// Generates a random value of `Self` of `count` digits using `randomGenerator`.
     public static func random(ofCount count: Int, using randomGenerator: RandomGenerator) -> BigUInt {
-        var result: BigUInt = 0
-        for i in 0 ..< count {
-            result[i] = .random(using: randomGenerator)
-        }
-        return result
+        return BigUInt((0 ..< count).map { _ in Digit.random(using: randomGenerator) })
     }
 
 }
