@@ -40,7 +40,7 @@ private extension BigUInt {
 
 }
 
-extension BigUInt: RandomToValue {
+extension BigUInt: RandomToValue, RandomThroughValue {
 
     /// The random base from which to generate.
     public static let randomBase: BigUInt = 0
@@ -51,6 +51,15 @@ extension BigUInt: RandomToValue {
             return value
         } else {
             return _random(to: value.count, using: randomGenerator) % value
+        }
+    }
+
+    /// Generates a random value of `Self` from `Self.randomBase` through `value` using `randomGenerator`.
+    public static func random(through value: BigUInt, using randomGenerator: RandomGenerator) -> BigUInt {
+        if value == randomBase {
+            return value
+        } else {
+            return _random(to: value.count, using: randomGenerator) % (value + 1)
         }
     }
 
