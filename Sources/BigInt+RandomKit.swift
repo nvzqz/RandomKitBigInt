@@ -28,7 +28,7 @@
 import RandomKit
 import BigInt
 
-extension BigInt: RandomToValue {
+extension BigInt: RandomToValue, RandomThroughValue {
 
     /// The random base from which to generate.
     public static var randomBase: BigInt {
@@ -38,6 +38,11 @@ extension BigInt: RandomToValue {
     /// Generates a random value of `Self` from `Self.randomBase` to `value` using `randomGenerator`.
     public static func random(to value: BigInt, using randomGenerator: RandomGenerator) -> BigInt {
         return BigInt(abs: .random(to: value.abs, using: randomGenerator), negative: value.negative)
+    }
+
+    /// Generates a random value of `Self` from `Self.randomBase` through `value` using `randomGenerator`.
+    public static func random(through value: BigInt, using randomGenerator: RandomGenerator) -> BigInt {
+        return BigInt(abs: .random(through: value.abs, using: randomGenerator), negative: value.negative)
     }
 
 }
