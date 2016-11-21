@@ -19,6 +19,10 @@
 		52A507421DE2FCAD00278ABE /* BigUInt+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A507401DE2FCAD00278ABE /* BigUInt+RandomKit.swift */; };
 		52A507431DE2FCAD00278ABE /* BigUInt+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A507401DE2FCAD00278ABE /* BigUInt+RandomKit.swift */; };
 		52A507441DE2FCAD00278ABE /* BigUInt+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A507401DE2FCAD00278ABE /* BigUInt+RandomKit.swift */; };
+		52A507461DE2FD8400278ABE /* BigInt+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A507451DE2FD8400278ABE /* BigInt+RandomKit.swift */; };
+		52A507471DE2FD8400278ABE /* BigInt+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A507451DE2FD8400278ABE /* BigInt+RandomKit.swift */; };
+		52A507481DE2FD8400278ABE /* BigInt+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A507451DE2FD8400278ABE /* BigInt+RandomKit.swift */; };
+		52A507491DE2FD8400278ABE /* BigInt+RandomKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A507451DE2FD8400278ABE /* BigInt+RandomKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +131,7 @@
 		52A507341DE2F7FC00278ABE /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		52A5073A1DE2FBC900278ABE /* RandomKitBigInt.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RandomKitBigInt.playground; sourceTree = "<group>"; };
 		52A507401DE2FCAD00278ABE /* BigUInt+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BigUInt+RandomKit.swift"; sourceTree = "<group>"; };
+		52A507451DE2FD8400278ABE /* BigInt+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BigInt+RandomKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +209,7 @@
 		52A506A91DE2F02C00278ABE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				52A507451DE2FD8400278ABE /* BigInt+RandomKit.swift */,
 				52A507401DE2FCAD00278ABE /* BigUInt+RandomKit.swift */,
 			);
 			path = Sources;
@@ -542,6 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A507461DE2FD8400278ABE /* BigInt+RandomKit.swift in Sources */,
 				52A507411DE2FCAD00278ABE /* BigUInt+RandomKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,6 +557,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A507471DE2FD8400278ABE /* BigInt+RandomKit.swift in Sources */,
 				52A507421DE2FCAD00278ABE /* BigUInt+RandomKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,6 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A507481DE2FD8400278ABE /* BigInt+RandomKit.swift in Sources */,
 				52A507431DE2FCAD00278ABE /* BigUInt+RandomKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -566,6 +575,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52A507491DE2FD8400278ABE /* BigInt+RandomKit.swift in Sources */,
 				52A507441DE2FCAD00278ABE /* BigUInt+RandomKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
