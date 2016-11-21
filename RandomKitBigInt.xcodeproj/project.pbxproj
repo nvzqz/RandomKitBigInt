@@ -121,6 +121,7 @@
 		52A506C71DE2F6AD00278ABE /* RandomKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RandomKit.xcodeproj; path = Carthage/Checkouts/RandomKit/RandomKit.xcodeproj; sourceTree = "<group>"; };
 		52A506F61DE2F72F00278ABE /* BigInt.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = BigInt.xcodeproj; path = Carthage/Checkouts/BigInt/BigInt.xcodeproj; sourceTree = "<group>"; };
 		52A507341DE2F7FC00278ABE /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		52A5073A1DE2FBC900278ABE /* RandomKitBigInt.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = RandomKitBigInt.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +171,7 @@
 				52A506A71DE2F01400278ABE /* Support */,
 				52A506AB1DE2F69A00278ABE /* Dependencies */,
 				52A5066B1DE2EFB800278ABE /* Products */,
+				52A5073A1DE2FBC900278ABE /* RandomKitBigInt.playground */,
 				52A506AA1DE2F16900278ABE /* LICENSE.md */,
 				52A507341DE2F7FC00278ABE /* Cartfile */,
 			);
