@@ -28,19 +28,15 @@
 import BigInt
 import RandomKit
 
-private extension BigUInt {
+extension BigUInt: RandomToValue, RandomThroughValue, RandomWithinRange, RandomWithinClosedRange {
 
-    static func _random(to count: Int, using randomGenerator: RandomGenerator) -> BigUInt {
+    private static func _random(to count: Int, using randomGenerator: RandomGenerator) -> BigUInt {
         var result: BigUInt = 0
         for i in 0 ..< count {
             result[i] = .random(using: randomGenerator)
         }
         return result
     }
-
-}
-
-extension BigUInt: RandomToValue, RandomThroughValue {
 
     /// The random base from which to generate.
     public static let randomBase: BigUInt = 0

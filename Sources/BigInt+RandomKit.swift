@@ -28,7 +28,7 @@
 import RandomKit
 import BigInt
 
-extension BigInt: RandomToValue, RandomThroughValue {
+extension BigInt: RandomToValue, RandomThroughValue, RandomWithinRange, RandomWithinClosedRange {
 
     /// The random base from which to generate.
     public static var randomBase: BigInt {
