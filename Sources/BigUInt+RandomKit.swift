@@ -57,17 +57,19 @@ extension BigUInt: RandomToValue, RandomThroughValue, RandomWithinRange, RandomW
         if value == randomBase {
             return value
         } else {
-            return random(ofCount: value.count, using: randomGenerator) % value
+            let max = BigUInt((0 ..< value.count).map { _ in Digit.max })
+            let maxModded = max % value
+            var result: BigUInt
+            repeat {
+                result = random(ofCount: value.count, using: randomGenerator)
+            } while result < maxModded
+            return result % value
         }
     }
 
     /// Generates a random value of `Self` from `Self.randomBase` through `value` using `randomGenerator`.
     public static func random(through value: BigUInt, using randomGenerator: RandomGenerator) -> BigUInt {
-        if value == randomBase {
-            return value
-        } else {
-            return random(ofCount: value.count, using: randomGenerator) % (value + 1)
-        }
+        return random(to: value + 1, using: randomGenerator)
     }
 
 }
