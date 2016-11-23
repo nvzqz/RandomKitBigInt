@@ -1,0 +1,9 @@
+[submodule "Carthage/Checkouts/RandomKit"]
+	path = Carthage/Checkouts/RandomKit
+	url = https://github.com/nvzqz/RandomKit.git
+[submodule "Carthage/Checkouts/SipHash"]
+	path = Carthage/Checkouts/SipHash
+	url = https://github.com/lorentey/SipHash.git
+[submodule "Carthage/Checkouts/BigInt"]
+	path = Carthage/Checkouts/BigInt
+	url = https://github.com/lorentey/BigInt.git
