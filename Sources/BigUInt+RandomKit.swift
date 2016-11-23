@@ -30,6 +30,10 @@ import RandomKit
 
 extension BigUInt: Random {
 
+    private static func _randomDigits(ofCount count: Int, using randomGenerator: RandomGenerator) -> [Digit] {
+        return (0 ..< count).map { _ in .random(using: randomGenerator) }
+    }
+
     /// Generates a random value of `Self` of count `1` using `randomGenerator`.
     public static func random(using randomGenerator: RandomGenerator) -> BigUInt {
         return random(ofCount: 1, using: randomGenerator)
@@ -42,7 +46,44 @@ extension BigUInt: Random {
 
     /// Generates a random value of `Self` of `count` digits using `randomGenerator`.
     public static func random(ofCount count: Int, using randomGenerator: RandomGenerator) -> BigUInt {
-        return BigUInt((0 ..< count).map { _ in Digit.random(using: randomGenerator) })
+        return BigUInt(_randomDigits(ofCount: count, using: randomGenerator))
+    }
+
+    /// Generates a random `BigUInt` with a maximum width using the default random generator.
+    public static func random(withMaxWidth width: Int) -> BigUInt {
+        return random(withMaxWidth: width, using: .default)
+    }
+
+    /// Generates a random `BigUInt` with a maximum width using `randomGenerator`.
+    public static func random(withMaxWidth width: Int, using randomGenerator: RandomGenerator) -> BigUInt {
+        guard width > 0 else {
+            return BigUInt()
+        }
+
+        let digitCount = (width + (Digit._width &- 1)) / Digit._width
+        var digits = _randomDigits(ofCount: digitCount, using: randomGenerator)
+
+        let moddedWidth = width % Digit._width
+        if moddedWidth != 0 {
+            digits[digitCount - 1] &= ._filled(to: moddedWidth)
+        }
+
+        return BigUInt(digits)
+    }
+
+    /// Generates a random `BigUInt` with an exact width using the default random generator.
+    public static func random(withExactWidth width: Int) -> BigUInt {
+        return random(withExactWidth: width, using: .default)
+    }
+
+    /// Generates a random `BigUInt` with an exact width using `randomGenerator`.
+    public static func random(withExactWidth width: Int, using randomGenerator: RandomGenerator) -> BigUInt {
+        guard width > 0 else {
+            return 0
+        }
+        var result = random(withMaxWidth: width, using: randomGenerator)
+        result[(width - 1) / Digit._width] |= ._bit(setAt: width)
+        return result
     }
 
 }
@@ -70,6 +111,22 @@ extension BigUInt: RandomToValue, RandomThroughValue, RandomWithinRange, RandomW
     /// Generates a random value of `Self` from `Self.randomBase` through `value` using `randomGenerator`.
     public static func random(through value: BigUInt, using randomGenerator: RandomGenerator) -> BigUInt {
         return random(to: value + 1, using: randomGenerator)
+    }
+
+}
+
+private extension BigUInt.Digit {
+
+    static var _width: Int {
+        return MemoryLayout<BigUInt.Digit>.size * 8
+    }
+
+    static func _bit(setAt n: Int) -> BigUInt.Digit {
+        return 1 << BigUInt.Digit((n &- 1) % _width)
+    }
+
+    static func _filled(to width: Int) -> BigUInt.Digit {
+        return max >> BigUInt.Digit(_width &- width)
     }
 
 }
