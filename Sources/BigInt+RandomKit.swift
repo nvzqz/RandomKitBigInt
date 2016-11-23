@@ -25,8 +25,8 @@
 //  THE SOFTWARE.
 //
 
-import RandomKit
-import BigInt
+@_exported import RandomKit
+@_exported import BigInt
 
 extension BigInt: Random {
 
