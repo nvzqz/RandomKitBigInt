@@ -179,8 +179,8 @@
 			isa = PBXGroup;
 			children = (
 				52A506A91DE2F02C00278ABE /* Sources */,
-				52A506A71DE2F01400278ABE /* Support */,
 				52A506AB1DE2F69A00278ABE /* Dependencies */,
+				52A506A71DE2F01400278ABE /* Support */,
 				52A5066B1DE2EFB800278ABE /* Products */,
 				52A5073A1DE2FBC900278ABE /* RandomKitBigInt.playground */,
 				52A5074A1DE3078700278ABE /* Package.swift */,
@@ -653,7 +653,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/RandomKitBigInt.xcodeproj/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PROJECT_BUNDLE_IDENTIFIER)";
@@ -712,7 +712,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/RandomKitBigInt.xcodeproj/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PROJECT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
@@ -773,7 +773,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/RandomKitBigInt.xcodeproj/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -832,7 +832,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/RandomKitBigInt.xcodeproj/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PROJECT_BUNDLE_IDENTIFIER)";

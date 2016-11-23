@@ -1,2 +1,2 @@
 github "nvzqz/RandomKit" ~> 2.3.0
-github "lorentey/BigInt" ~> 2.1.0
+github "lorentey/BigInt" ~> 2.1.1
