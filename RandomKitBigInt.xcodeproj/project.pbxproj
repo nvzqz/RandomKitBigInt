@@ -133,6 +133,7 @@
 		52A507401DE2FCAD00278ABE /* BigUInt+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BigUInt+RandomKit.swift"; sourceTree = "<group>"; };
 		52A507451DE2FD8400278ABE /* BigInt+RandomKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BigInt+RandomKit.swift"; sourceTree = "<group>"; };
 		52A5074A1DE3078700278ABE /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		52C3E8951DE635DB00760B77 /* RandomKitBigInt.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = RandomKitBigInt.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +186,7 @@
 				52A5073A1DE2FBC900278ABE /* RandomKitBigInt.playground */,
 				52A5074A1DE3078700278ABE /* Package.swift */,
 				52A506AA1DE2F16900278ABE /* LICENSE.md */,
+				52C3E8951DE635DB00760B77 /* RandomKitBigInt.podspec */,
 				52A507341DE2F7FC00278ABE /* Cartfile */,
 			);
 			sourceTree = "<group>";
