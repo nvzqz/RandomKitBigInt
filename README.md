@@ -84,3 +84,7 @@ manager for Objective-C and Swift.
     ```swift
     import RandomKitBigInt
     ```
+
+## License
+
+RandomKit is released under the [MIT License](https://opensource.org/licenses/MIT).
