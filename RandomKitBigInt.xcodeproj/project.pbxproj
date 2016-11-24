@@ -26,6 +26,55 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5217713C1DE6B79900DD4584 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 521771251DE6B79800DD4584 /* SipHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BBB55AB21C8F80020050DDA9;
+			remoteInfo = iOS;
+		};
+		5217713E1DE6B79900DD4584 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 521771251DE6B79800DD4584 /* SipHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BBB55AD41C8F88F20050DDA9;
+			remoteInfo = macOS;
+		};
+		521771401DE6B79900DD4584 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 521771251DE6B79800DD4584 /* SipHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BBB55AF11C8F8BE00050DDA9;
+			remoteInfo = watchOS;
+		};
+		521771421DE6B79900DD4584 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 521771251DE6B79800DD4584 /* SipHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BBB55AFE1C8F8CBB0050DDA9;
+			remoteInfo = tvOS;
+		};
+		521771441DE6B79900DD4584 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 521771251DE6B79800DD4584 /* SipHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BBB55ABC1C8F80020050DDA9;
+			remoteInfo = "iOS Tests";
+		};
+		521771461DE6B79900DD4584 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 521771251DE6B79800DD4584 /* SipHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BBB55ADD1C8F88F20050DDA9;
+			remoteInfo = "macOS Tests";
+		};
+		521771481DE6B79900DD4584 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 521771251DE6B79800DD4584 /* SipHash.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BBB55B071C8F8CBB0050DDA9;
+			remoteInfo = "tvOS Tests";
+		};
 		52A506CF1DE2F6AD00278ABE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 52A506C71DE2F6AD00278ABE /* RandomKit.xcodeproj */;
@@ -120,6 +169,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		521771251DE6B79800DD4584 /* SipHash.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SipHash.xcodeproj; path = Carthage/Checkouts/SipHash/SipHash.xcodeproj; sourceTree = "<group>"; };
 		52A506781DE2EFD300278ABE /* RandomKitBigInt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RandomKitBigInt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A506851DE2EFE200278ABE /* RandomKitBigInt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RandomKitBigInt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A506921DE2EFEA00278ABE /* RandomKitBigInt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RandomKitBigInt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +226,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521771261DE6B79800DD4584 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5217713D1DE6B79900DD4584 /* SipHash.framework */,
+				5217713F1DE6B79900DD4584 /* SipHash.framework */,
+				521771411DE6B79900DD4584 /* SipHash.framework */,
+				521771431DE6B79900DD4584 /* SipHash.framework */,
+				521771451DE6B79900DD4584 /* SipHash-Test.xctest */,
+				521771471DE6B79900DD4584 /* SipHash-Test.xctest */,
+				521771491DE6B79900DD4584 /* SipHash-Test.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		52A5065E1DE2EF5600278ABE = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +288,7 @@
 			children = (
 				52A506C71DE2F6AD00278ABE /* RandomKit.xcodeproj */,
 				52A506F61DE2F72F00278ABE /* BigInt.xcodeproj */,
+				521771251DE6B79800DD4584 /* SipHash.xcodeproj */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -411,6 +476,10 @@
 					ProductGroup = 52A506C81DE2F6AD00278ABE /* Products */;
 					ProjectRef = 52A506C71DE2F6AD00278ABE /* RandomKit.xcodeproj */;
 				},
+				{
+					ProductGroup = 521771261DE6B79800DD4584 /* Products */;
+					ProjectRef = 521771251DE6B79800DD4584 /* SipHash.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -423,6 +492,55 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		5217713D1DE6B79900DD4584 /* SipHash.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SipHash.framework;
+			remoteRef = 5217713C1DE6B79900DD4584 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5217713F1DE6B79900DD4584 /* SipHash.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SipHash.framework;
+			remoteRef = 5217713E1DE6B79900DD4584 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		521771411DE6B79900DD4584 /* SipHash.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SipHash.framework;
+			remoteRef = 521771401DE6B79900DD4584 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		521771431DE6B79900DD4584 /* SipHash.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SipHash.framework;
+			remoteRef = 521771421DE6B79900DD4584 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		521771451DE6B79900DD4584 /* SipHash-Test.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SipHash-Test.xctest";
+			remoteRef = 521771441DE6B79900DD4584 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		521771471DE6B79900DD4584 /* SipHash-Test.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SipHash-Test.xctest";
+			remoteRef = 521771461DE6B79900DD4584 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		521771491DE6B79900DD4584 /* SipHash-Test.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SipHash-Test.xctest";
+			remoteRef = 521771481DE6B79900DD4584 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		52A506D01DE2F6AD00278ABE /* RandomKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
