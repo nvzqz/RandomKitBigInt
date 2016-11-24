@@ -1,5 +1,13 @@
 [![RandomKitBigInt](https://github.com/nvzqz/RandomKitBigInt/raw/master/Images/banner.png)](https://github.com/nvzqz/RandomKitBigInt)
 
+<p align="center">
+<img src="https://img.shields.io/badge/platform-ios%20%7C%20macos%20%7C%20watchos%20%7C%20tvos%20%7C%20linux-lightgrey.svg" alt="Platform">
+<img src="https://img.shields.io/badge/language-swift-orange.svg" alt="Language: Swift">
+<a href="https://cocoapods.org/pods/RandomKitBigInt"><img src="https://img.shields.io/cocoapods/v/RandomKitBigInt.svg" alt="CocoaPods - RandomKit"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage"></a>
+<img src="https://img.shields.io/badge/license-MIT-000000.svg" alt="License">
+</p>
+
 RandomKitBigInt allows for random generation of arbitrary-precision integers in
 Swift. This is a set of extensions to [BigInt](https://github.com/lorentey/BigInt)
 that provide functionality of [RandomKit](https://github.com/nvzqz/RandomKit).
