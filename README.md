@@ -1,4 +1,4 @@
-# RandomKitBigInt
+[![RandomKitBigInt](https://github.com/nvzqz/RandomKitBigInt/raw/master/Images/banner.png)](https://github.com/nvzqz/RandomKitBigInt)
 
 RandomKitBigInt allows for random generation of arbitrary-precision integers in
 Swift. This is a set of extensions to [BigInt](https://github.com/lorentey/BigInt)
