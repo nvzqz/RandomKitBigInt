@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name                      = "RandomKitBigInt"
-    s.version                   = "1.0.0"
+    s.version                   = "1.1.0"
     s.summary                   = "Random generation of arbitrary-precision integers in Swift."
     s.homepage                  = "https://github.com/nvzqz/#{s.name}"
     s.license                   = { :type => "MIT", :file => "LICENSE.md" }
