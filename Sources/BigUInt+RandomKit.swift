@@ -101,7 +101,7 @@ extension BigUInt: RandomToValue, RandomThroughValue, RandomWithinRange, RandomW
         if value == randomBase {
             return value
         } else {
-            let max = BigUInt((0 ..< value.count).map { _ in Digit.max })
+            let max = BigUInt([Digit](repeating: .max, count: value.count))
             let maxModded = max % value
             var result: BigUInt
             repeat {
