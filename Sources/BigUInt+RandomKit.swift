@@ -31,7 +31,10 @@
 extension BigUInt: Random {
 
     private static func _randomDigits(ofCount count: Int, using randomGenerator: RandomGenerator) -> [Digit] {
-        return (0 ..< count).map { _ in .random(using: randomGenerator) }
+        let result = [Digit](repeating: 0, count: count)
+        let buffer = UnsafeMutablePointer(mutating: result)
+        randomGenerator.randomize(buffer: buffer, size: MemoryLayout<Digit>.size * count)
+        return result
     }
 
     /// Generates a random value of `Self` of count `1` using `randomGenerator`.
